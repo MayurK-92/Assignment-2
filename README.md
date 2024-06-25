@@ -46,10 +46,10 @@ docker build -t <your-dockerhub-username>/<your-image-name> .
 To run the Docker container and ensure the application works correctly inside the container, use the following command:
 
 ```bash
-docker run -p 8000:8000 <your-dockerhub-username>/<your-image-name>
+docker run -p 5000:5000 <your-dockerhub-username>/<your-image-name>
 ```
 
-You should now be able to access the application at `http://localhost:8000`.
+You should now be able to access the application at `http://localhost:5000`.
 
 ### 4. Using Docker Compose
 
@@ -98,7 +98,7 @@ Run the following command to start the services defined in the `docker-compose.y
 docker-compose up --build
 ```
 
-The application will be accessible at `http://localhost:8000`, and the MongoDB database will be running in the background.
+The application will be accessible at `http://localhost:5000`, and the MongoDB database will be running in the background.
 
 ### 5. Push the Docker Image to Docker Hub
 
