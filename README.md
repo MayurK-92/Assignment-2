@@ -1,4 +1,4 @@
-
+Assignment-2
 # Dockerized Flask/FastAPI Application
 
 This repository contains a Dockerized Flask/FastAPI application with a MongoDB database, managed using Docker Compose.
@@ -20,8 +20,8 @@ This repository contains a Dockerized Flask/FastAPI application with a MongoDB d
 ├── models.py      
 ├── Dockerfile
 ├── docker-compose.yml
-├── requirements.txt
-└── README.md            
+├── requirements.txt  
+         
 ```
 
 ## Getting Started
@@ -122,7 +122,7 @@ Replace `<repository-url>`, `<repository-directory>`, `<your-dockerhub-username>
 
 ---
 ---
-
+Assignment -3
 # Jenkins Freestyle Job for Dockerized Flask/FastAPI Application
 
 This repository contains the instructions to set up a Jenkins freestyle job to pull the Dockerized Flask/FastAPI application from a Git repository and launch it on port 5003.
@@ -177,16 +177,12 @@ sudo systemctl enable jenkins
    - Add a build step to execute shell commands:
      ```sh
      # Pull the latest changes
-     git pull <repository-url>
 
-     # Build the Docker image
-     docker build -t <your-dockerhub-username>/<your-image-name> .
-
-     # Stop and remove any running container of the same name
-     docker stop my_docker_app || true && docker rm my_docker_app || true
-
-     # Run the Docker container on port 5003
-     docker run -d -p 5003:5000 --name my_docker_app <your-dockerhub-username>/<your-image-name>
+     cd <repository name>
+     sudo git pull <repository-url>
+     sudo docker-compose down
+     sudo docker-compose up -d
+     
      ```
 
 4. **Save and Run the Job**:
